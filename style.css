@@ -1,0 +1,150 @@
+/* Variables */
+:root {
+    --brightOrangeSedan: hsl(31, 77%, 52%);
+    --darkCyanSuv: hsl(184, 100%, 22%);
+    --veryDarkCyanLux: hsl(179, 100%, 13%);
+    --paragraphWhite: hsla(0, 0%, 100%, 0.75);
+    --veryLightGray: hsl(0, 0%, 95%);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+/* Layout */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lexend Deca', sans-serif;
+    background: var(--veryLightGray);
+}
+
+.cars-card {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    max-width: 80vw;
+}
+
+.cars-card section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+
+}
+.sedan-container {
+    background: var(--brightOrangeSedan);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.suv-container {
+    background: var(--darkCyanSuv);
+}
+
+.luxury-container {
+    background: var(--veryDarkCyanLux);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cars-card section {
+    height: 29rem;
+    padding: 3rem;
+}
+
+h1 {
+    color: var(--veryLightGray);
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+p {
+    color: var(--paragraphWhite);
+    font-size: .8rem;
+    line-height: 1.5rem;
+    width: 95%;
+}
+
+img {
+    height: 2.6rem;
+    width: 4.3rem;
+}
+
+button {
+    width: 65%;
+    height: 2.6rem;
+    border-radius: 25px;
+    border: none;
+    background: var(--veryLightGray);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: .8rem;
+}
+
+.sedan-container button {
+    color: var(--brightOrangeSedan);
+}
+
+.suv-container button {
+    color: var(--darkCyanSuv);
+}
+
+.luxury-container button {
+    color: var(--veryDarkCyanLux);
+}
+
+button:hover {
+    background: none;
+    color: var(--paragraphWhite);
+    cursor: pointer;
+    border: 1px solid var(--paragraphWhite);
+}
+
+
+.attribution { 
+    font-size: 11px;
+    text-align: center; 
+}
+
+.attribution a {
+    color: var(--brightOrangeSedan);
+    font-size: 11px;
+}
+
+
+/* Desktop */
+
+@media screen and (min-width: 960px) {
+
+    body {
+        justify-content: center;
+    }
+
+    .cars-card {
+        display: flex;
+        flex-direction: row;
+        height: 33.3rem;
+        width: 61rem;
+    }
+
+    .cars-card section {
+        width: 33.3rem;
+    }
+    .sedan-container {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+
+    .luxury-container {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+}
